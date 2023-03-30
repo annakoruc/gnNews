@@ -43,7 +43,7 @@ label {
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: $max-width-small-screen) {
     margin-right: 40px;
   }
 }

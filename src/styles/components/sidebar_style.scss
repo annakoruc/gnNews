@@ -57,7 +57,7 @@ aside {
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: $max-width-small-screen) {
     height: 50px;
 
     align-self: flex-start;

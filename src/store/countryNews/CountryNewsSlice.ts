@@ -15,6 +15,7 @@ interface CountryNewsSlice {
     url: string;
     urlToImage?: File;
     publishedAt: Date;
+    content: string | null;
   }>;
   loading: boolean;
   error: string;
@@ -56,6 +57,7 @@ const countriesNewsSlice = createSlice({
     builder.addCase(getDataFromApi.fulfilled, (state, action) => {
       state.loading = false;
       state.articles = action.payload.articles;
+      console.log(state.articles);
     });
     builder.addCase(getDataFromApi.rejected, (state, action) => {
       console.log("rejected", action.error);

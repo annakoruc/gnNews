@@ -10,9 +10,16 @@ type Props = {
   title: string;
   urlToImage?: File | string | undefined;
   author: string;
+  content: string | null;
 };
 
-export const NewsCard = ({ title, urlToImage, url, author }: Props) => {
+export const NewsCard = ({
+  title,
+  urlToImage,
+  url,
+  author,
+  content,
+}: Props) => {
   const dispatch = useDispatch();
 
   const icon = urlToImage ? String(urlToImage) : gnNews;
@@ -20,7 +27,15 @@ export const NewsCard = ({ title, urlToImage, url, author }: Props) => {
 
   const openModal = () => {
     dispatch(CHANGE_IS_OPEN_NEWS());
-    dispatch(ADD_ARTICLE({ title: title, author: author, url: url }));
+    dispatch(
+      ADD_ARTICLE({
+        title: title,
+        author: author,
+        url: url,
+        content: content,
+        img: icon,
+      })
+    );
     console.log("click");
   };
 

@@ -30,15 +30,6 @@ export const CountryNews = ({ code }: Props) => {
     dispatch(getDataFromApi(code));
   }, [code, dispatch]);
 
-  // const url =
-  //   "https://wydarzenia.interia.pl/kraj/news-donald-tusk-wskazuje-na-szpitale-prawie-wszedzie-slyszelismy,nId,6682781";
-
-  // const onLoadIframe = () => {
-  //   const iframe = document.getElementById("iframe");
-
-  //   return iframe.innerHTML;
-  // };
-
   return (
     <Container>
       <div className={switchBoolean ? "all_news_list" : "all_news_cards"}>
@@ -52,6 +43,8 @@ export const CountryNews = ({ code }: Props) => {
               author={element.author}
               date={element.publishedAt}
               url={element.url}
+              content={element.content}
+              urlToImage={element.urlToImage}
             />
           ))
         ) : (
@@ -62,27 +55,21 @@ export const CountryNews = ({ code }: Props) => {
               url={element.url}
               urlToImage={element.urlToImage}
               author={element.author}
+              content={element.content}
             />
           ))
         )}
         {isOpen && (
           <Modal>
-            <p>{article?.author}</p>
-            <p>{article?.title}</p>
-            <a href={article?.url}>Link</a>
+            <h2>{article?.title}</h2>
+            <img src={article?.img} alt="icon" />
+            <p>{article?.content}</p>
+
+            <h3>Autor: {article?.author}</h3>
+            <a href={article?.url}>Zobacz całość</a>
           </Modal>
         )}
       </div>
-      {/* <iframe
-        id="iframe"
-        src={url}
-        width={1000}
-        height={500}
-        sandbox="allow-same-origin"
-        // sandbox="allow-scripts allow-modal"
-        loading="eager"
-        title="urlPage"
-      /> */}
     </Container>
   );
 };

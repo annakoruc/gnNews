@@ -19,7 +19,7 @@ nav {
     gap: 30px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: $max-width-small-screen) {
     grid-row: 1;
     border: none;
     position: fixed;
@@ -28,6 +28,5 @@ nav {
     button {
       display: none;
     }
-    // color: white;
   }
 }
