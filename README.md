@@ -31,3 +31,5 @@ To na czym nam zależy to przede wszystkim czytelny kod, działająca aplikacja 
 Jeżeli masz jakiekolwiek pytania co do wykonywanego zadania, bądź coś nie jest dla Ciebie jasne, albo masz trudności na którymś etapie, nie krępuj się - dzwoń, pisz - wyjaśnimy (chyba 😛)
 
 ## Powodzenia!
+
+//używałam biblioteki: npm flag-icons

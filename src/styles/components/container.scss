@@ -1,0 +1,21 @@
+@import "../variables.scss";
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin: 55px 0;
+  gap: 50px;
+
+  @media (max-width: 700px) {
+    grid-row: 2;
+    height: calc(100vh - $nav-height - $footer-height - $footer-height);
+    width: 100vw;
+    margin: 0;
+
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

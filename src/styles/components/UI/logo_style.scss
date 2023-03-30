@@ -1,0 +1,14 @@
+@import "../../variables.scss";
+
+.logo {
+  font-size: 40px;
+  background: $c-white;
+  border: none;
+  cursor: pointer;
+
+  span {
+    font-size: 48px;
+    font-weight: 700;
+    color: $c-purple;
+  }
+}

@@ -1,0 +1,45 @@
+@import "../variables.scss";
+
+.footer {
+  width: 100%;
+  min-height: $footer-height;
+  border-top: 1px solid $c-grey;
+  background-color: $c-white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+
+  .footer_author {
+    font-size: 14px;
+  }
+
+  a {
+    color: $c-purple;
+    text-decoration: none;
+  }
+
+  .footer_data {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .clock {
+      font-size: 28px;
+      color: $c-purple;
+    }
+  }
+
+  @media (max-width: 700px) {
+    grid-row: 3;
+    justify-content: center;
+    position: fixed;
+    border: none;
+
+    .footer_author {
+      display: none;
+    }
+  }
+}

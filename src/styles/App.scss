@@ -1,0 +1,22 @@
+@import "./variables.scss";
+
+.App {
+  width: 1440px;
+  min-height: 100vh;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 45px;
+
+  @media (max-width: 700px) {
+    height: 100%;
+    // width: 100vw;
+    padding: 0;
+    // position: fixed;
+    display: grid;
+    grid-template-rows: $nav-height auto $footer-height;
+  }
+}

@@ -1,0 +1,38 @@
+//colors
+$c-dark: #273756;
+$c-purple: #8b6af3;
+$c-grey: #e0e0e0;
+$c-white: #ffffff;
+
+//fonts
+
+$font: "Raleway", sans-serif;
+
+//mixin
+
+@mixin button_a_with_shadow($height) {
+  height: $height;
+  background-color: $c-white;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 0px 6px rgba(157, 157, 157, 0.25);
+
+  font-family: $font;
+  text-align: center;
+  padding: 0 15px;
+
+  &:hover {
+    box-shadow: 0px 0px 6px #8b6af3;
+    cursor: pointer;
+  }
+}
+
+//height
+
+$nav-height: 120px;
+$footer-height: 50px;
+$container-margin: 55px;
+
+//response
+
+$max-width-small-screen: 700px;

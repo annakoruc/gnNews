@@ -1,0 +1,59 @@
+@import "../../variables.scss";
+
+.element {
+  @include button_a_with_shadow(auto);
+  width: 95%;
+  padding: 0 25px;
+
+  display: grid;
+  grid-template-areas: "title author date";
+  grid-template-columns: auto 200px 200px;
+  align-items: center;
+
+  text-decoration: none;
+
+  color: $c-dark;
+
+  .title {
+    grid-area: title;
+    width: 100%;
+    font-weight: 700;
+    white-space: nowrap;
+
+    text-align: start;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .author {
+    grid-area: author;
+    width: 100%;
+    color: $c-purple;
+
+    text-align: end;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .date {
+    grid-area: date;
+    justify-self: flex-end;
+  }
+
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    .author {
+      text-align: center;
+    }
+  }
+}
