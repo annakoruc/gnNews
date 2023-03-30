@@ -13,12 +13,10 @@ export const Sidebar = () => {
     <aside>
       <div className={openSidebar ? "sidebar_menu" : "sidebar_menu hiden"}>
         {countries.map((country) => (
-          <>
-            <NavLink key={country.code} to={`/country/${country.name}`}>
-              <span className={`fi fi-${country.code}`} />
-              {country.name.toUpperCase()}
-            </NavLink>
-          </>
+          <NavLink key={country.code} to={`/country/${country.name}`}>
+            <span className={`fi fi-${country.code}`} />
+            {country.name.toUpperCase()}
+          </NavLink>
         ))}
       </div>
       <button

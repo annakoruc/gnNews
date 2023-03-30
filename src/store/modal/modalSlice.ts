@@ -1,17 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { JsxElement } from "typescript";
 
 interface ModalSliceTypes {
   isOpenNews?: boolean;
   isOpenContent?: boolean;
-  article?: { title: string; author: string; url: string };
+  article?: {
+    title: string;
+    author: string;
+    url: string;
+    content: string;
+    img: string;
+  };
   content?: string | JSX.Element | JSX.Element[];
 }
 
 const initialState: ModalSliceTypes = {
   isOpenNews: false,
   isOpenContent: false,
-  article: { title: "", author: "", url: "" },
+  article: { title: "", author: "", url: "", content: "", img: "" },
   content: "",
 };
 

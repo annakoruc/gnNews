@@ -8,7 +8,7 @@
   margin: 55px 0;
   gap: 50px;
 
-  @media (max-width: 700px) {
+  @media (max-width: $max-width-small-screen) {
     grid-row: 2;
     height: calc(100vh - $nav-height - $footer-height - $footer-height);
     width: 100vw;
