@@ -24,7 +24,7 @@
     max-width: 30%;
 
     padding: 2rem 1rem;
-    border-radius: 1rem;
+    border-radius: 15px;
 
     a {
       background-color: $c-purple;
@@ -38,6 +38,11 @@
     img {
       width: 90%;
       margin: 20px 0;
+    }
+
+    ul {
+      text-align: justify;
+      padding-right: 5%;
     }
   }
 

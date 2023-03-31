@@ -25,12 +25,31 @@ export const Navbar = () => {
   return (
     <nav>
       <Logo />
-      <div>
+      <div className="buttons_div">
         <Button title={t("button.info")} onClick={openModal} />
         {location.pathname === "/" && <ChangeLanguageButton />}
         <ToggleSwitch />
       </div>
-      {isOpen && <Modal>'Uzupełnij'</Modal>}
+      {isOpen && (
+        <Modal>
+          <ul>
+            <p>{t("info.fun.title")}</p>
+            <li>{t("info.fun.first")}</li>
+            <li>{t("info.fun.second")} </li>
+          </ul>
+          <ul>
+            <p>{t("info.difficulty.title")}</p>
+            <li>{t("info.difficulty.first")}</li>
+            <li>{t("info.difficulty.second")}</li>
+            <li>{t("info.difficulty.third")}</li>
+          </ul>
+          <ul>
+            <p>{t("info.inAddition.title")}</p>
+            <li>{t("info.inAddition.first")}</li>
+            <li>{t("info.inAddition.second")}</li>
+          </ul>
+        </Modal>
+      )}
     </nav>
   );
 };
