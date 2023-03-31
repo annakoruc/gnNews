@@ -1,13 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ADD_CONTENT, CHANGE_IS_OPEN_CONTENT } from "../store/modal/modalSlice";
 import { RootState } from "../store";
 
-import { Logo, Button, Modal, ToggleSwitch } from "./UI";
+import { Logo, Button, Modal, ToggleSwitch, ChangeLanguageButton } from "./UI";
 
 import "../styles/components/navbar_style.scss";
-import { ChangeLanguageButton } from "./UI/ChangeLanguageButton";
-import { useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const { t } = useTranslation();

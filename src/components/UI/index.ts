@@ -5,3 +5,4 @@ export * from "./NewsCard";
 export * from "./NewsListElement";
 export * from "./Modal";
 export * from "./Loader";
+export * from "./ChangeLanguageButton";

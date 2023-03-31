@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+
 import "../../styles/components/UI/logo_style.scss";
 
 export const Logo = () => {

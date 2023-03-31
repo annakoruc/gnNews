@@ -1,9 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { ADD_ARTICLE, CHANGE_IS_OPEN_NEWS } from "../../store/modal/modalSlice";
 
 import "../../styles/components/UI/news_card_style.scss";
 import gnNews from "../../assets/icons/gnNews.svg";
-import { useDispatch } from "react-redux";
-import { ADD_ARTICLE, CHANGE_IS_OPEN_NEWS } from "../../store/modal/modalSlice";
 
 type Props = {
   url: string;
