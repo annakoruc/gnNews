@@ -13,9 +13,7 @@
 
   @media (max-width: $max-width-small-screen) {
     height: 100%;
-    // width: 100vw;
     padding: 0;
-    // position: fixed;
     display: grid;
     grid-template-rows: $nav-height auto $footer-height;
   }

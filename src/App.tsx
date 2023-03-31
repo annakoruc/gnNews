@@ -1,12 +1,20 @@
-import "./styles/App.scss";
+import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 import { Footer, Navbar } from "./components";
 import { CountryNews, HomePage, NotFoundPage } from "./pages";
-import { Route, Routes } from "react-router-dom";
+import countries from "./config/countries";
 
-import { countries } from "./config/countries";
+import "./styles/App.scss";
 
 function App() {
-  const countryName = "POLAND";
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const lng = navigator.language;
+    i18n.changeLanguage(lng);
+  }, [i18n]);
 
   return (
     <div className="App">

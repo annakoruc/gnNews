@@ -6,6 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import store from "./store";
 import { Provider } from "react-redux";
 
+import "./i18n";
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -18,5 +20,3 @@ root.render(
   </Provider>
   // </React.StrictMode>
 );
-
-// reportWebVitals();

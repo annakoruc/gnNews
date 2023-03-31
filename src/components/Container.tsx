@@ -1,4 +1,5 @@
 import { Sidebar } from "./Sidebar";
+
 import "../styles/components/container.scss";
 
 type props = {

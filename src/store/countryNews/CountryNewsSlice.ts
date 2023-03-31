@@ -1,11 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-// const fetchNews = fetch(
-//   "https://newsapi.org/v2/top-headlines?country=pl&apiKey=a7d21bd4efd6414f8df5f5a452f99539"
-// )
-//   .then((response) => response.json())
-//   .then((data) => console.log(data));
-
 interface CountryNewsSlice {
   country: string;
   totalResults: number;
@@ -57,7 +51,6 @@ const countriesNewsSlice = createSlice({
     builder.addCase(getDataFromApi.fulfilled, (state, action) => {
       state.loading = false;
       state.articles = action.payload.articles;
-      console.log(state.articles);
     });
     builder.addCase(getDataFromApi.rejected, (state, action) => {
       console.log("rejected", action.error);
