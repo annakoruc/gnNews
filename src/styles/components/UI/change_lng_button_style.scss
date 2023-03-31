@@ -1,0 +1,26 @@
+@import "../../variables.scss";
+
+.two_buttons {
+  display: flex;
+  gap: 0;
+  height: 35px;
+  width: 80px;
+  border-radius: 6px;
+  background-color: $c-dark;
+
+  .button_select {
+    border: none;
+    background: none;
+    height: 100%;
+    width: 50%;
+
+    color: $c-white;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .active {
+    background-color: $c-purple;
+    border-radius: 6px;
+  }
+}

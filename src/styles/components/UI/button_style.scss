@@ -2,4 +2,8 @@
 
 .styled_button {
   @include button_a_with_shadow(35px);
+
+  @media (max-width: $max-width-small-screen) {
+    display: none;
+  }
 }

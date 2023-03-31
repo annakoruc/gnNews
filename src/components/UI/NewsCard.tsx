@@ -36,7 +36,6 @@ export const NewsCard = ({
         img: icon,
       })
     );
-    console.log("click");
   };
 
   return (
